@@ -1,5 +1,5 @@
 """This module implements a Source Subclass for wrapping
-`beancount.ingest.importer.ImporterProtocol` subclasses importers.
+`beangulp.importer.ImporterProtocol` subclasses importers.
 The importers are considered athoritative of the account they represent.
 
 The Transaction.narration set by each importer is copied to Posting.meta[source_desc]
@@ -21,8 +21,8 @@ from typing import Hashable, List, Dict, Optional
 from beancount.core.data import Balance, Transaction, Posting,  Directive
 from beancount.core.amount import Amount
 from beancount.core.convert import get_weight
-from beancount.ingest.importer import ImporterProtocol
-from beancount.ingest.cache import get_file
+from beangulp.importer import ImporterProtocol
+from beangulp.cache import get_file
 from beancount.parser.booking_full import convert_costspec_to_cost
 
 from ..matching import FIXME_ACCOUNT, SimpleInventory
